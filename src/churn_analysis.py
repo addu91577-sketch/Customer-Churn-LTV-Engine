@@ -91,3 +91,22 @@ internet_churn_rate = pd.crosstab(
 ) * 100
 
 print(internet_churn_rate.round(2))
+
+# Churn count by payment method
+print("\nChurn Count by Payment Method:")
+payment_churn = pd.crosstab(
+    df["PaymentMethod"],
+    df["Churn"]
+)
+
+print(payment_churn)
+
+# Churn rate by payment method
+print("\nChurn Rate by Payment Method:")
+payment_churn_rate = pd.crosstab(
+    df["PaymentMethod"],
+    df["Churn"],
+    normalize="index"
+) * 100
+
+print(payment_churn_rate.round(2))
