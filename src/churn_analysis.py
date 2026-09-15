@@ -130,3 +130,31 @@ senior_churn_rate = pd.crosstab(
 ) * 100
 
 print(senior_churn_rate["Yes"].round(2))
+
+# Churn count by partner status
+print("\nChurn Count by Partner Status:")
+print(pd.crosstab(df["Partner"], df["Churn"]))
+
+# Churn rate by partner status
+print("\nChurn Rate by Partner Status:")
+partner_churn_rate = pd.crosstab(
+    df["Partner"],
+    df["Churn"],
+    normalize="index"
+) * 100
+
+print(partner_churn_rate["Yes"].round(2))
+
+# Average tenure and monthly charges by churn status
+print("\nCustomer Profile by Churn Status:")
+profile = df.groupby("Churn")[["tenure", "MonthlyCharges"]].mean().round(2)
+
+print(profile)
+
+# Numerical feature summary by churn status
+print("\nNumerical Feature Summary by Churn Status:")
+print(
+    df.groupby("Churn")[["tenure", "MonthlyCharges", "TotalCharges"]]
+    .mean()
+    .round(2)
+)
