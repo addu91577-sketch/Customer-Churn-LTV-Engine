@@ -116,3 +116,17 @@ print("\nAverage Tenure by Contract Type:")
 contract_tenure = df.groupby("Contract")["tenure"].mean()
 
 print(contract_tenure.round(2))
+
+# Churn count by senior citizen status
+print("\nChurn Count by Senior Citizen Status:")
+print(pd.crosstab(df["SeniorCitizen"], df["Churn"]))
+
+# Churn rate by senior citizen status
+print("\nChurn Rate by Senior Citizen Status:")
+senior_churn_rate = pd.crosstab(
+    df["SeniorCitizen"],
+    df["Churn"],
+    normalize="index"
+) * 100
+
+print(senior_churn_rate["Yes"].round(2))
