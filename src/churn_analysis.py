@@ -24,3 +24,34 @@ print("Retention Rate:", round(churn_percentages["No"], 2), "%")
 
 # Check missing values in Churn
 print("\nMissing Churn Values:", df["Churn"].isnull().sum())
+
+# Check TotalCharges data type
+print("\nTotalCharges Data Type:")
+print(df["TotalCharges"].dtype)
+
+# Check blank values
+print("\nBlank TotalCharges Values:")
+print(df["TotalCharges"].astype(str).str.strip().eq("").sum())
+
+# Convert TotalCharges to numeric
+df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
+
+print("\nTotalCharges Data Type After Conversion:")
+print(df["TotalCharges"].dtype)
+
+print("\nMissing TotalCharges Values After Conversion:")
+print(df["TotalCharges"].isnull().sum())
+
+# Fill missing TotalCharges with 0
+df["TotalCharges"] = df["TotalCharges"].fillna(0)
+
+print("\nMissing TotalCharges Values After Filling:")
+print(df["TotalCharges"].isnull().sum())
+
+# Verify TotalCharges cleaning
+print("\nTotalCharges Summary:")
+print(df["TotalCharges"].describe())
+
+# Verify zero TotalCharges customers
+print("\nCustomers with Zero TotalCharges:")
+print(df[df["TotalCharges"] == 0][["tenure", "TotalCharges"]])
