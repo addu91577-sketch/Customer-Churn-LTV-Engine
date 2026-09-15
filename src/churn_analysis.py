@@ -110,3 +110,9 @@ payment_churn_rate = pd.crosstab(
 ) * 100
 
 print(payment_churn_rate.round(2))
+
+# Average tenure by contract type
+print("\nAverage Tenure by Contract Type:")
+contract_tenure = df.groupby("Contract")["tenure"].mean()
+
+print(contract_tenure.round(2))
