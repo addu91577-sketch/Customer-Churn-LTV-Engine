@@ -55,3 +55,39 @@ print(df["TotalCharges"].describe())
 # Verify zero TotalCharges customers
 print("\nCustomers with Zero TotalCharges:")
 print(df[df["TotalCharges"] == 0][["tenure", "TotalCharges"]])
+
+# Average tenure by churn status
+print("\nAverage Tenure by Churn Status:")
+print(df.groupby("Churn")["tenure"].mean())
+
+# Churn count by contract type
+print("\nChurn Count by Contract Type:")
+print(pd.crosstab(df["Contract"], df["Churn"]))
+
+# Churn rate by contract type
+print("\nChurn Rate by Contract Type:")
+contract_churn_rate = pd.crosstab(
+    df["Contract"],
+    df["Churn"],
+    normalize="index"
+) * 100
+
+print(contract_churn_rate["Yes"].round(2))
+
+# Average monthly charges by churn status
+print("\nAverage Monthly Charges by Churn Status:")
+print(df.groupby("Churn")["MonthlyCharges"].mean().round(2))
+
+# Churn count by internet service
+print("\nChurn Count by Internet Service:")
+print(pd.crosstab(df["InternetService"], df["Churn"]))
+
+# Churn rate by Internet Service
+print("\nChurn Rate by Internet Service:")
+internet_churn_rate = pd.crosstab(
+    df["InternetService"],
+    df["Churn"],
+    normalize="index"
+) * 100
+
+print(internet_churn_rate.round(2))
