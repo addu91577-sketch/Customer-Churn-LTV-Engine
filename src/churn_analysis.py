@@ -158,3 +158,52 @@ print(
     .mean()
     .round(2)
 )
+
+# ==========================================
+# DAY 4 - CATEGORICAL FEATURE ANALYSIS
+# ==========================================
+
+categorical_features = [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+]
+
+# Churn count and churn rate for each categorical feature
+for feature in categorical_features:
+
+    print(f"\n{'=' * 50}")
+    print(f"{feature} - Churn Count")
+    print(f"{'=' * 50}")
+
+    # Churn counts
+    churn_count = pd.crosstab(df[feature], df["Churn"])
+    print(churn_count)
+
+    print(f"\n{feature} - Churn Rate (%)")
+    print(f"{'=' * 50}")
+
+    # Churn rate
+    churn_rate = (
+        pd.crosstab(
+            df[feature],
+            df["Churn"],
+            normalize="index"
+        ) * 100
+    )
+
+    # Display only the Yes churn percentage
+    if "Yes" in churn_rate.columns:
+        print(churn_rate["Yes"].round(2))
