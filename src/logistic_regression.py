@@ -55,3 +55,45 @@ print(y_train.value_counts())
 
 print("\nTesting target distribution:")
 print(y_test.value_counts())
+
+logistic_model.fit(X_train, y_train)
+
+# Make predictions on test data
+y_pred = logistic_model.predict(X_test)
+
+print("\nLogistic Regression predictions completed successfully.")
+print("Number of predictions:", len(y_pred))
+print("Predicted churn distribution:")
+print(pd.Series(y_pred).value_counts())
+
+# Day 8: Evaluate Logistic Regression model
+
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+print("\nLogistic Regression Evaluation Metrics:")
+print("Accuracy:", round(accuracy, 4))
+print("Precision:", round(precision, 4))
+print("Recall:", round(recall, 4))
+print("F1 Score:", round(f1, 4))
+
+# Day 9: Generate confusion matrix
+
+from sklearn.metrics import confusion_matrix
+
+cm = confusion_matrix(y_test, y_pred)
+
+print("\nConfusion Matrix:")
+print(cm)
+
+tn, fp, fn, tp = cm.ravel()
+
+print("\nConfusion Matrix Details:")
+print("True Negatives:", tn)
+print("False Positives:", fp)
+print("False Negatives:", fn)
+print("True Positives:", tp)
