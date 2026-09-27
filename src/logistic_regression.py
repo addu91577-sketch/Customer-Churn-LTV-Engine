@@ -115,3 +115,10 @@ print("Balanced LR F1:", round(balanced_f1, 4))
 print("\nModel Comparison")
 print("Normal LR F1:", round(f1_score(y_test, normal_pred), 4))
 print("Balanced LR F1:", round(f1_score(y_test, y_pred_balanced), 4))
+
+
+print("\nLogistic Regression Summary")
+print("Normal LR F1:", round(normal_f1, 4))
+print("Balanced LR F1:", round(balanced_f1, 4))
+print("Training samples:", len(X_train))
+print("Testing samples:", len(X_test))
