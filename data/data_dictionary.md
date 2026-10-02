@@ -10,3 +10,4 @@
 | Contract | Customer contract type | Categorical |
 | InternetService | Internet service type | Categorical |
 | Churn | Whether customer left the company | Categorical |
+s
