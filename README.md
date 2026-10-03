@@ -87,6 +87,21 @@ Attrition is heavily concentrated in the early lifecycle stages:
 
 ---
 
+## 📑 Excel Data Exploration & Pivot Modeling
+
+The exploratory analysis commenced with manual hygiene audits and pivot modeling in **Microsoft Excel** ([`excel/Telco_Customer_Churn_Exploration.xlsx`](excel/Telco_Customer_Churn_Exploration.xlsx)):
+
+1. **Hygiene & Data Auditing**:
+   - Resolved 11 whitespace records in `TotalCharges` (customers with `tenure = 0`), casting the column from text to numeric currency.
+2. **Pivot Table 1 (Contract Vulnerability)**:
+   - Evaluated churn volume by contract: Month-to-month contracts drive **88.5% of all attrition** (42.71% churn rate) compared to 2.83% for 2-year plans.
+3. **Pivot Table 2 (Tenure Risk Cohorts)**:
+   - Bucketed tenure into 6 cohorts: **55.48% of all churners** drop out within the **0–12 month window** (47.44% cohort churn rate).
+4. **Outlier Detection via Conditional Formatting**:
+   - Highlighted accounts paying $\ge \$70/\text{month}$ (top quartiles) where price sensitivity significantly accelerates churn.
+
+---
+
 ## 🗄️ Relational Database (PostgreSQL) Integration
 
 The analytical pipeline is backed by a structured relational schema in PostgreSQL for enterprise queries:
@@ -118,18 +133,22 @@ Customer-Churn-LTV-Engine/
 │   ├── data_dictionary.md      # Field descriptions, data types, and domains
 │   ├── telco_customer_churn_clean.csv  # Preprocessed production dataset
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv # Raw baseline dataset
+├── excel/
+│   └── Telco_Customer_Churn_Exploration.xlsx # Multi-sheet Excel workbook with pivots & formatting
 ├── notebooks/
 │   ├── 01_data_cleaning.ipynb  # Missing value handling, typing & deduplication
 │   ├── 02_database_import.ipynb# PostgreSQL pipeline & connection scripts
 │   ├── 03_exploratory_data_analysis.ipynb # Complete EDA, statistical tests & plots
 │   └── reports/
-│       └── business_insights.md# Executive takeaways & analytical summary
+│       ├── business_insights.md# Executive takeaways & analytical summary
+│       └── excel_data_exploration.md # Detailed Excel data exploration report
 ├── sql/
 │   ├── 01_create_database.sql  # Database initialization
 │   ├── 02_create_table.sql     # Table schema definition
 │   └── 03_basic_analysis.sql   # Key aggregation & segmentation queries
 ├── src/
 │   ├── churn_analysis.py       # Core churn metrics calculator
+│   ├── excel_data_exploration.py # Automated generator for corporate Excel workbook
 │   └── preprocess.py           # Reusable data transformation pipelines
 ├── visuals/                    # Generated visual analytics charts
 ├── .gitignore                  # Git exclusion rules
