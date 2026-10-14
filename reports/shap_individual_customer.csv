@@ -1,0 +1,46 @@
+Feature,SHAPValue,AbsoluteSHAP
+cat__Contract_Month-to-month,0.5532113,0.5532113
+cat__PaymentMethod_Electronic check,0.28259906,0.28259906
+cat__InternetService_Fiber optic,-0.25150836,0.25150836
+num__tenure,-0.20351122,0.20351122
+cat__MultipleLines_No,-0.17792782,0.17792782
+cat__OnlineSecurity_No,0.14074886,0.14074886
+cat__TechSupport_No,0.12578103,0.12578103
+num__SeniorCitizen,0.09642701,0.09642701
+cat__InternetService_DSL,-0.0806736,0.0806736
+cat__PaperlessBilling_No,0.07951819,0.07951819
+cat__OnlineBackup_No,0.06526977,0.06526977
+num__TotalCharges,-0.054321695,0.054321695
+cat__Contract_One year,-0.04156456,0.04156456
+cat__StreamingTV_Yes,-0.04155237,0.04155237
+cat__PhoneService_No,-0.03258698,0.03258698
+cat__StreamingTV_No,-0.03107833,0.03107833
+cat__Contract_Two year,0.027121756,0.027121756
+cat__Dependents_No,0.021308325,0.021308325
+num__MonthlyCharges,-0.020553358,0.020553358
+cat__StreamingMovies_Yes,-0.017062424,0.017062424
+cat__MultipleLines_Yes,-0.009017809,0.009017809
+cat__gender_Female,0.007917929,0.007917929
+cat__Partner_No,0.005233749,0.005233749
+cat__StreamingMovies_No,-0.004795539,0.004795539
+cat__PaymentMethod_Bank transfer (automatic),-0.0036338768,0.0036338768
+cat__PaymentMethod_Credit card (automatic),0.0025324489,0.0025324489
+cat__PaymentMethod_Mailed check,0.0010775421,0.0010775421
+cat__DeviceProtection_Yes,-0.00060808274,0.00060808274
+cat__DeviceProtection_No,0.00050755596,0.00050755596
+cat__TechSupport_Yes,0.00049550517,0.00049550517
+cat__OnlineBackup_Yes,0.0003532145,0.0003532145
+cat__MultipleLines_No phone service,0.0,0.0
+cat__gender_Male,0.0,0.0
+cat__Partner_Yes,0.0,0.0
+cat__Dependents_Yes,0.0,0.0
+cat__PaperlessBilling_Yes,0.0,0.0
+cat__PhoneService_Yes,0.0,0.0
+cat__OnlineSecurity_No internet service,0.0,0.0
+cat__InternetService_No,0.0,0.0
+cat__TechSupport_No internet service,0.0,0.0
+cat__OnlineSecurity_Yes,0.0,0.0
+cat__StreamingMovies_No internet service,0.0,0.0
+cat__StreamingTV_No internet service,0.0,0.0
+cat__DeviceProtection_No internet service,0.0,0.0
+cat__OnlineBackup_No internet service,0.0,0.0
