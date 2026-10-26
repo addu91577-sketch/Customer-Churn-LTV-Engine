@@ -232,3 +232,6 @@ Divya Bi dashboard.jpeg
 .env.*
 !.env.example
 
+
+*.sqlite
+*.db
