@@ -119,7 +119,7 @@ def schedule_post(api_key, channel_id, text, due_at_iso):
 
 def main():
     parser = argparse.ArgumentParser(description="Schedule LinkedIn posts via Buffer API")
-    parser.add_argument('--file', default=r"c:\Users\Iba Zaidi\Desktop\LinkedIn-Analytics-Posts\LinkedIn_Data_Analytics_Top_30_Posts.docx")
+    parser.add_argument('--file', default="LinkedIn_Data_Analytics_Top_30_Posts.docx", help="Path to LinkedIn posts .docx file")
     parser.add_argument('--start-post', type=int, default=1, help="Starting post number (1-indexed)")
     parser.add_argument('--count', type=int, default=10, help="Number of posts to schedule")
     parser.add_argument('--start-date', type=str, default="2026-10-04", help="Start date in YYYY-MM-DD format")

@@ -1,6 +1,6 @@
 -- ===================================================================
 -- Customer Churn & Lifetime Value (LTV) Engine
--- Days 10–12 & Days 13–16: Analytical SQL Views for Power BI Integration
+-- Days 10-12 & Days 13-16: Analytical SQL Views for Power BI Integration
 -- ===================================================================
 
 -- 1. Executive Summary KPIs View

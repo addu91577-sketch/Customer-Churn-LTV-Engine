@@ -1,7 +1,12 @@
+import os
 import pandas as pd
 
-# Load dataset
-df = pd.read_csv("../data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+# Load dataset robustly whether executed from repo root or src directory
+data_path = "data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+if not os.path.exists(data_path):
+    data_path = os.path.join(os.path.dirname(__file__), "..", "data", "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
+df = pd.read_csv(data_path)
 
 # Convert TotalCharges to numeric
 df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
@@ -25,7 +30,7 @@ print(df.dtypes)
 
 # Separate numerical and categorical columns
 numerical_columns = df.select_dtypes(include=["int64", "float64"]).columns
-categorical_columns = df.select_dtypes(include=["object"]).columns
+categorical_columns = df.select_dtypes(include=["object", "string", "str"]).columns
 
 print("\nNumerical columns:")
 print(list(numerical_columns))

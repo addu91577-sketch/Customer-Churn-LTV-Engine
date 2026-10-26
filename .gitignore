@@ -221,3 +221,14 @@ __marimo__/
 .venv/
 
 .DS_Store
+
+# Local screenshots and desktop images
+*.jpeg
+*.jpg
+Divya Bi dashboard.jpeg
+
+# Environment files safety
+.env
+.env.*
+!.env.example
+

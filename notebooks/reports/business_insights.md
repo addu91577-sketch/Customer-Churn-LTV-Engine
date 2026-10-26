@@ -26,9 +26,11 @@
 
 ---
 
-## Business Recommendations
+## Strategic Business Recommendations
 
-1. **Incentivize Long-Term Contracts:** Offer targeted discounts or value-added perks to migrate Month-to-month users to 1-Year or 2-Year plans.
+1. **Incentivize Long-Term Contracts:** Offer targeted discounts ($5–$10/month credit) or device upgrade perks to migrate Month-to-Month users to 1-Year or 2-Year plans.
 2. **Improve Onboarding for High-Risk Service Tiers:** Review pricing and service reliability for Fiber Optic plans to address customer drop-offs within the first 12 months.
-3. **Promote Automated Payment Options:** Encourage shifting from Electronic Checks to Auto-Pay (Credit Card/Bank Transfer) through setup bonuses.
-4.
+3. **Promote Automated Payment Options:** Encourage shifting from Electronic Checks to Auto-Pay (Credit Card/Bank Transfer) through a one-time $10–$15 billing bonus.
+4. **Bundle High-Value Support & Security:** Subscribers with Online Security and Tech Support show over 50% lower churn; bundling these at discounted rates during onboarding stabilizes high-risk accounts.
+5. **Early-Tenure Onboarding Interventions:** With 55.5% of churn happening in the first 12 months, implement a structured 30-60-90 day proactive customer success sequence.
+6. **Price Fatigue Mitigation:** For subscribers paying >$70/mo on month-to-month contracts, provide flexible tiered package downgrades rather than losing the account entirely.

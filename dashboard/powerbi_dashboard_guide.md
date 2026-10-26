@@ -12,7 +12,7 @@
 
 1. Open **Power BI Desktop** (already installed on this machine as `MicrosoftPowerBIDesktop`).
 2. Click **Get Data** > **Text/CSV** > Select:  
-   `C:\Users\Iba Zaidi\Desktop\Telco _Customer_Churn\data\telco_churn_powerbi_dataset.csv`  
+   `data/telco_churn_powerbi_dataset.csv`  
    *(Or connect to PostgreSQL using `sql/04_churn_and_ltv_views.sql` views).*
 3. Verify all 7,043 rows are detected and click **Load**.
 4. Go to **Modeling** tab > **New Measure** and copy-paste the DAX formulas from [`dax_measures.md`](dax_measures.md).

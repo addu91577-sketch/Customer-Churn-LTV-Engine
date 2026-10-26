@@ -1,4 +1,4 @@
-﻿anyio==4.15.1
+anyio==4.15.1
 argon2-cffi==25.1.0
 argon2-cffi-bindings==26.1.0
 arrow==1.4.0
@@ -114,3 +114,5 @@ websocket-client==1.9.2
 widgetsnbextension==4.0.16
 xgboost==3.4.1
 shap==0.52.0
+openpyxl==3.1.5
+pytest==9.1.1

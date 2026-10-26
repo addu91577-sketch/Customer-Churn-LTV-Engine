@@ -1,7 +1,12 @@
+import os
 import pandas as pd
 
-# Load dataset
-df = pd.read_csv("../data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+# Load dataset robustly whether executed from repo root or src directory
+data_path = "data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+if not os.path.exists(data_path):
+    data_path = os.path.join(os.path.dirname(__file__), "..", "data", "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
+df = pd.read_csv(data_path)
 
 # Churn counts
 churn_counts = df["Churn"].value_counts()
